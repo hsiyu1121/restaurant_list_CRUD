@@ -4,9 +4,10 @@
     <div class="col-12 col-md-10 mx-auto">
 
       <div class="d-flex justify-content-start">
-        <a href="/restaurants/{{ restaurants._id }}/edit" class="btn btn-primary btn-sm mx-1">edit</a>
-        <form action="/restaurants/{{restaurants.id}}" method="POST" style="display: inline;">
-          <button type="submit" class="btn btn-primary btn-sm">delete</button>
+        <a href="/restaurants/{{ restaurants._id }}/edit" class="btn btn-primary btn-sm mx-1">修改</a>
+        <form action="/restaurants/{{restaurants.id}}" method="POST" style="display: inline;"
+          onsubmit="return confirm('確定是否刪除')">
+          <button type="submit" class="btn btn-danger btn-sm">刪除</button>
         </form>
       </div>
       <p class="mb-1">
